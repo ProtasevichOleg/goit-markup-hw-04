@@ -15,6 +15,7 @@
   --main-black-color: #000000;
   --portfolio-card-border-color: #eeeeee;
   --unactive-svg-color: #afb1b8;
+  --unactive-footer-svg-bg-color: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -55,7 +56,8 @@ img {
   color: inherit;
 }
 
-.link:focus {
+.link:focus,
+.btn:focus {
   outline: inherit;
 }
 
@@ -345,17 +347,17 @@ img {
   text-decoration: none;
 }
 
-.member-soc-list {
+.soc-list {
   display: flex;
   justify-content: space-between;
 }
 
-.member-soc-item {
+.soc-item {
   height: 44px;
   width: 44px;
 }
 
-.member-soc-link {
+.soc-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -364,12 +366,15 @@ img {
   border-radius: 50%;
   background-color: transparent;
   fill: currentColor;
+}
+
+.member-soc-link {
   color: var(--unactive-svg-color);
   background-color: transparent;
 }
 
-.member-soc-link:hover,
-.member-soc-link:focus {
+.soc-link:hover,
+.soc-link:focus {
   color: var(--active-button-text-color);
   background-color: var(--accent-color);
 }
@@ -414,6 +419,15 @@ img {
   background-color: var(--dark-bg-color);
 }
 
+.footer-wrap {
+  display: flex;
+}
+
+.footer-first-column {
+  width: 231px;
+  margin-right: 70px;
+}
+
 .footer .logo-link {
   margin-bottom: 20px;
   padding: 0;
@@ -448,6 +462,26 @@ img {
   color: var(--accent-color);
 }
 
+.footer-second-column {
+  padding-top: 12px;
+  flex-basis: 206px;
+}
+
+.footer-join-title {
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  color: var(--white-text-color);
+}
+
+.footer-soc-link {
+  color: var(--white-text-color);
+  background-color: var(--unactive-footer-svg-bg-color);
+}
+
 /* --------------PORTFOLIO----------------- */
 /* ----------------PAGE-------------------- */
 
@@ -479,6 +513,8 @@ img {
 .filter-btn:focus {
   background-color: var(--accent-color);
   color: var(--active-button-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-list {
@@ -491,6 +527,18 @@ img {
   flex-basis: calc((100% - 60px) / 3);
 
   background: var(--card-bg-color);
+}
+
+.portfolio-card-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-card-link:hover,
+.portfolio-card-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-card-description {
