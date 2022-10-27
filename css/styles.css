@@ -419,8 +419,9 @@ img {
   background-color: var(--dark-bg-color);
 }
 
-.footer-wrap {
+.footer .container {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-first-column {
@@ -463,7 +464,7 @@ img {
 }
 
 .footer-second-column {
-  padding-top: 12px;
+  /* padding-top: 12px; */
   flex-basis: 206px;
 }
 
